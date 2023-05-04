@@ -6,7 +6,7 @@
 
 ## Installation
 
-1. Clone the repository: `git clone https://github.com/claskpaige/V-exploral.git`
+1. Clone the repository: `git clone https://github.com/clasikpaige/V-exploral.git`
 2. Install the required dependencies: `pip install -r requirements.txt`
 
 ## Usage
