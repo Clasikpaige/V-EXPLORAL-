@@ -3,8 +3,19 @@ import nmap
 # Function to scan for open ports and vulnerabilities
 def scan(target, scan_type):
     scanner = nmap.PortScanner()
-    args = '-sV' if scan_type == '1' else '-sC'
-
+    
+    # Specify port ranges to scan
+    args = '-p 1-65535'
+    
+    # Specify additional options based on scan type
+    if scan_type == '1':
+        args += ' -sV'
+    elif scan_type == '2':
+        args += ' -sC'
+    
+    # Specify SMTP ports to scan
+    args += ' -p 25,465,587'
+    
     try:
         scanner.scan(target, arguments=args)
     except nmap.PortScannerError:
